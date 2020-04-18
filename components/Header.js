@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     alignItems: "center",
     justifyContent: "space-between",
+    display: "flex",
   },
   outlined: {
     color: "white",
