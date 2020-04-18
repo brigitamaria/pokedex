@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontStyle: "italic",
   },
+  rootMenu: {
+    maxHeight: "250px",
+  },
 }));
 
 const renderFilter = (handleClose) => {
@@ -64,7 +67,7 @@ const Header = ({ handleClose, handleClick, selectedFilter, setSelectedFilter, a
         <Box display="flex" flexDirection="row" alignItems="center" width={"200px"}>
           <Typography variant="caption">Filter By:</Typography>
           <Box display="flex" flexDirection="row" alignItems="center" justifyContent="flex-start">
-            <Button classes={{ root: classes.outlined }} aria-haspopup="true" onClick={handleClick} variant="outlined" color="primary">
+            <Button classes={{ outlined: classes.outlined }} aria-haspopup="true" onClick={handleClick} variant="outlined" color="primary">
               {selectedFilter ? selectedFilter : "SELECT ONE"}
             </Button>
 
