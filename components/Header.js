@@ -59,7 +59,7 @@ const Header = ({ handleClose, handleClick, selectedFilter, setSelectedFilter, a
   const classes = useStyles();
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Toolbar classes={{ root: classes.root }}>
         <Link href="/">
           <Typography variant="h6">Pokédex </Typography>

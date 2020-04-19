@@ -91,7 +91,7 @@ function Home({ pokemons, next }) {
         }
 
         .pokedexContainer {
-          padding: 64px;
+          padding: 96px 64px;
           flex-grow: 1;
         }
       `}</style>
