@@ -60,7 +60,7 @@ const Header = ({ handleClose, handleClick, selectedFilter, setSelectedFilter, a
 
   return (
     <AppBar position="static">
-      <Toolbar className={classes.root}>
+      <Toolbar classes={classes.root}>
         <Link href="/">
           <Typography variant="h6">Pokédex </Typography>
         </Link>
@@ -85,7 +85,7 @@ const Header = ({ handleClose, handleClick, selectedFilter, setSelectedFilter, a
             )}
           </Box>
 
-          <Menu className={classes.rootMenu} anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose.bind(null, null)}>
+          <Menu classes={classes.rootMenu} anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose.bind(null, null)}>
             {renderFilter(handleClose)}
           </Menu>
         </Box>
