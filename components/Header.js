@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontStyle: "italic",
   },
-  rootMenu: {
+  paper: {
     maxHeight: "250px",
   },
 }));
@@ -60,7 +60,7 @@ const Header = ({ handleClose, handleClick, selectedFilter, setSelectedFilter, a
 
   return (
     <AppBar position="static">
-      <Toolbar classes={classes.root}>
+      <Toolbar classes={{ root: classes.root }}>
         <Link href="/">
           <Typography variant="h6">Pokédex </Typography>
         </Link>
@@ -85,7 +85,7 @@ const Header = ({ handleClose, handleClick, selectedFilter, setSelectedFilter, a
             )}
           </Box>
 
-          <Menu classes={classes.rootMenu} anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose.bind(null, null)}>
+          <Menu classes={{ paper: classes.paper }} anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose.bind(null, null)}>
             {renderFilter(handleClose)}
           </Menu>
         </Box>
